@@ -2,8 +2,10 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Order,OrderItem
 from products.models import Product
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url="/users/login/")
 def cart_page(request):
     if request.method == "POST":
         product_name = request.POST.get("product-name")
