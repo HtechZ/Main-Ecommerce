@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "tailwindcss": "^4.3.3",
-    "@tailwindcss/cli": "^4.3.3"
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
   },
   "scripts": {
-    "build": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./static/src/output.css",
-    "tailwind": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./static/src/output.css"
+    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/src/output.css",
+    "tailwind": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/src/output.css"
   }
 }
