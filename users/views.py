@@ -12,8 +12,10 @@ def register_page(request):
             username = form.cleaned_data["username"]
             phone_number = form.cleaned_data["phone_number"]
             email = form.cleaned_data["email"]
-            if email == "":user = User.objects.create_user(username=username,phone_number=phone_number)
-            else:user = User.objects.create_user(username=username,phone_number=phone_number,email=email)
+            if email == "":
+                user = User.objects.create_user(username=username,phone_number=phone_number)
+            else:
+                user = User.objects.create_user(username=username,phone_number=phone_number,email=email)
             login(request,user)
             return redirect("/")
     else:
@@ -28,8 +30,7 @@ def login_page(request):
             username = form.cleaned_data["username"]
             phone_number = form.cleaned_data["phone_number"]
             user = User.objects.filter(username=username,phone_number=phone_number).first()
-            print(user)
-            # login(request,user)
+            login(request,user)
             return redirect("/")
     else:
         form = Form()
