@@ -28,7 +28,8 @@ def login_page(request):
             username = form.cleaned_data["username"]
             phone_number = form.cleaned_data["phone_number"]
             user = User.objects.filter(username=username,phone_number=phone_number).first()
-            login(request,user)
+            print(user)
+            # login(request,user)
             return redirect("/")
     else:
         form = Form()
