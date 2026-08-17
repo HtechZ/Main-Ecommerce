@@ -4,10 +4,7 @@
     "tailwindcss": "^4.3.3"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/src/output.css",
     "tailwind": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/src/output.css"
-  },
-  "allowScripts": {
-    "@parcel/watcher@2.5.1": true
   }
 }
