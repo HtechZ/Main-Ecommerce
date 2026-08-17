@@ -27,7 +27,7 @@ def login_page(request):
         if form.is_valid():
             username = form.cleaned_data["username"]
             phone_number = form.cleaned_data["phone_number"]
-            user = User.objects.get(username=username,phone_number=phone_number)
+            user = User.objects.filter(username=username,phone_number=phone_number).first()
             login(request,user)
             return redirect("/")
     else:
