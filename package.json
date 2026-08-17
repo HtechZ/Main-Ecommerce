@@ -1,13 +1,10 @@
 {
+  "dependencies": {
+    "tailwindcss": "^4.3.3",
+    "@tailwindcss/cli": "^4.3.3"
+  },
   "scripts": {
-    "build": "npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --minify"
-  },
-  "allowScripts": {
-    "tailwindcss@4.3.3": true,
-    "@parcel/watcher@2.5.1": true
-  },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
+    "build": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./static/src/output.css",
+    "tailwind": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./static/src/output.css"
   }
 }
