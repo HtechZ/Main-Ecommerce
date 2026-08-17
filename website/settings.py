@@ -153,3 +153,5 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+CSRF_COOKIE_DOMAIN = "https://main-ecommerce-smtf.onrender.com/"
